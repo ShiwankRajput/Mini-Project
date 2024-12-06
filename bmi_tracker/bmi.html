@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI & Weight Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BMI & Weight Tracker</h1>
+    </header>
+
+    <div class="bmi-form">
+      <h2>Calculate BMI</h2>
+      <input type="number" id="height" placeholder="Enter height (cm)" />
+      <input type="number" id="weight" placeholder="Enter weight (kg)" />
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <p id="bmi-result"></p>
+    </div>
+
+    <div class="weight-tracker">
+      <h2>Track Your Weight</h2>
+      <input type="number" id="current-weight" placeholder="Enter current weight (kg)" />
+      <button onclick="trackWeight()">Track Weight</button>
+      <ul id="weight-history"></ul>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+      <h2>Weight Tracking Chart</h2>
+      <canvas id="weightChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
