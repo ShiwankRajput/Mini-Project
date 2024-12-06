@@ -1,8 +1,8 @@
-// Define calorie burn rates (per minute)
+// Calorie burn rates per minute
 const calorieRates = {
-    Running: 10, // kcal per minute
-    Cycling: 8,  // kcal per minute
-    Walking: 4,  // kcal per minute
+    Running: 10,  // kcal per minute
+    Cycling: 8,   // kcal per minute
+    Walking: 4,   // kcal per minute
 };
 
 let totalCaloriesBurned = 0;
@@ -12,7 +12,7 @@ let activityData = {
     Walking: 0,
 };
 
-// Initialize the chart
+// Initialize chart
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
@@ -21,9 +21,9 @@ const myChart = new Chart(ctx, {
         datasets: [{
             label: 'Calories Burned',
             data: [0, 0, 0],
-            backgroundColor: 'rgba(75, 192, 192, 0.5)', /* Light teal for chart */
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
+            backgroundColor: '#00bcd4',
+            borderColor: '#0098a6',
+            borderWidth: 1,
         }]
     },
     options: {
@@ -31,21 +31,14 @@ const myChart = new Chart(ctx, {
         scales: {
             y: {
                 beginAtZero: true,
-                max: 500, // Set a maximum value for better visualization
+                max: 500,
                 ticks: {
-                    color: '#fff', // Set y-axis ticks color to white
+                    color: '#fff',
                 },
             },
             x: {
                 ticks: {
-                    color: '#fff', // Set x-axis ticks color to white
-                },
-            },
-        },
-        plugins: {
-            legend: {
-                labels: {
-                    color: '#fff', // Set legend text color to white
+                    color: '#fff',
                 },
             },
         },
@@ -56,25 +49,20 @@ const myChart = new Chart(ctx, {
 function trackActivity() {
     const activity = document.getElementById("activity").value;
     const duration = document.getElementById("duration").value;
-    const calories = calorieRates[activity] * duration;
+    if (duration > 0) {
+        const calories = calorieRates[activity] * duration;
 
-    // Update total calories burned
-    totalCaloriesBurned += calories;
-    activityData[activity] += calories;
+        // Update total calories burned
+        totalCaloriesBurned += calories;
+        activityData[activity] += calories;
 
-    // Update calories burned on the page
-    document.getElementById("calories").textContent = totalCaloriesBurned;
+        // Update the displayed calories
+        document.getElementById("calories").textContent = totalCaloriesBurned.toFixed(2);
 
-    // Update chart data
-    myChart.data.datasets[0].data = [activityData.Running, activityData.Cycling, activityData.Walking];
-    myChart.update();
-
-    // Optional: Alert for a goal reached
-    if (totalCaloriesBurned >= 500) {
-        alert("Congrats! You've burned your goal of 500 kcal!");
-        totalCaloriesBurned = 0; // Reset after goal
-        activityData = { Running: 0, Cycling: 0, Walking: 0 }; // Reset activity data
-        myChart.data.datasets[0].data = [0, 0, 0];
+        // Update chart data
+        myChart.data.datasets[0].data = [activityData.Running, activityData.Cycling, activityData.Walking];
         myChart.update();
+    } else {
+        alert("Please enter a valid duration!");
     }
 }

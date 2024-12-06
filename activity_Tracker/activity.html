@@ -11,15 +11,9 @@
     <div class="container">
         <header>
             <h1>Activity Tracker</h1>
-            <nav>
-                <ul>
-                    <li><a href="#tracker">Tracker</a></li>
-                    <li><a href="#about">About Us</a></li>
-                </ul>
-            </nav>
         </header>
 
-        <section id="tracker" class="tracker">
+        <section class="tracker">
             <h2>Track Your Activity</h2>
             <div class="input-section">
                 <label for="activity">Select Activity:</label>
@@ -28,9 +22,9 @@
                     <option value="Cycling">Cycling</option>
                     <option value="Walking">Walking</option>
                 </select>
-                <label for="duration">Duration (minutes):</label>
-                <input type="number" id="duration" placeholder="Enter duration">
-                <button onclick="trackActivity()">Track Activity</button>
+                <label for="duration">Duration (in minutes):</label>
+                <input type="number" id="duration" placeholder="Enter duration" />
+                <button onclick="trackActivity()">Track</button>
             </div>
 
             <div class="stats">
@@ -38,17 +32,13 @@
             </div>
 
             <div class="chart">
-                <h3>Calories Burned Progress</h3>
-                <div id="myChartContainer">
-                    <canvas id="myChart" width="400" height="200"></canvas>
-                </div>
+                <canvas id="myChart" width="400" height="200"></canvas>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>We are a team of fitness enthusiasts dedicated to helping you track and improve your physical activities. Whether you are a beginner or an athlete, we provide a simple way to stay on top of your goals.</p>
-        </section>
+        <footer>
+            <p>&copy; 2024 Activity Tracker</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
