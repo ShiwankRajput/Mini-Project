@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Tracker App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <!-- Header with Theme Toggle -->
+  <header class="header">
+    <h1>Health Tracker</h1>
+    <button id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Theme</button>
+  </header>
+
+  <!-- Trackers Section -->
+  <div class="trackers">
+    <div class="tracker" id="activityTracker">
+      <div class="tracker-header">
+        <span class="material-icons">directions_run</span>
+        <h2>Activity Tracker</h2>
+      </div>
+      <button onclick="trackActivity()" class="tracker-btn">Log Activity</button>
+      <p id="activityDetails" class="tracker-details">No activity logged yet.</p>
+    </div>
+
+    <div class="tracker" id="sleepTracker">
+      <div class="tracker-header">
+        <span class="material-icons">bed</span>
+        <h2>Sleep Tracker</h2>
+      </div>
+      <button onclick="trackSleep()" class="tracker-btn">Log Sleep</button>
+      <p id="sleepDetails" class="tracker-details">No sleep logged yet.</p>
+    </div>
+
+    <div class="tracker" id="nutritionTracker">
+      <div class="tracker-header">
+        <span class="material-icons">restaurant</span>
+        <h2>Nutrition Tracker</h2>
+      </div>
+      <button onclick="trackNutrition()" class="tracker-btn">Log Nutrition</button>
+      <p id="nutritionDetails" class="tracker-details">No nutrition logged yet.</p>
+    </div>
+
+    <div class="tracker" id="stepsTracker">
+      <div class="tracker-header">
+        <span class="material-icons">directions_walk</span>
+        <h2>Steps Tracker</h2>
+      </div>
+      <button onclick="trackSteps()" class="tracker-btn">Log Steps</button>
+      <p id="stepsDetails" class="tracker-details">No steps logged yet.</p>
+    </div>
+
+    <div class="tracker" id="hydrationTracker">
+      <div class="tracker-header">
+        <span class="material-icons">local_drink</span>
+        <h2>Hydration Tracker</h2>
+      </div>
+      <button onclick="trackHydration()" class="tracker-btn">Log Hydration</button>
+      <p id="hydrationDetails" class="tracker-details">No hydration logged yet.</p>
+    </div>
+
+    <div class="tracker" id="weightTracker">
+      <div class="tracker-header">
+        <span class="material-icons">fitness_center</span>
+        <h2>Weight & BMI Tracker</h2>
+      </div>
+      <button onclick="trackWeight()" class="tracker-btn">Log Weight</button>
+      <p id="weightDetails" class="tracker-details">No weight logged yet.</p>
+    </div>
+
+    <div class="tracker" id="moodTracker">
+      <div class="tracker-header">
+        <span class="material-icons">mood</span>
+        <h2>Mood Tracker</h2>
+      </div>
+      <button onclick="trackMood()" class="tracker-btn">Log Mood</button>
+      <p id="moodDetails" class="tracker-details">No mood logged yet.</p>
+    </div>
+
+    <div class="tracker" id="exerciseTracker">
+      <div class="tracker-header">
+        <span class="material-icons">fitness_center</span>
+        <h2>Exercise Duration Tracker</h2>
+      </div>
+      <button onclick="trackExercise()" class="tracker-btn">Log Exercise</button>
+      <p id="exerciseDetails" class="tracker-details">No exercise logged yet.</p>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>We are a passionate team dedicated to helping you live a healthier life with our Health Tracker App. Our goal is to provide you with the tools to track and improve your well-being.</p>
+      </div>
+
+      <div class="footer-section contact-details">
+        <h3>Contact Us</h3>
+        <p><strong>Email:</strong> support@healthtracker.com</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+      </div>
+
+      <div class="footer-section good-wishes">
+        <h3>Good Wishes</h3>
+        <p>Thank you for choosing our Health Tracker App! Stay healthy, stay happy!</p>
+      </div>
+
+      <div class="footer-section location">
+        <h3>Location</h3>
+        <p>Health Tracker Inc., 123 Wellness St., Suite 101, Health City, HC 12345, Country</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
