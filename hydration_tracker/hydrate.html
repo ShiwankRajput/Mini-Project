@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydration Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Hydration Tracker</h1>
+      <p>Track your daily water intake and stay hydrated!</p>
+    </header>
+
+    <section class="instructions">
+      <h3>Hydration Instructions:</h3>
+      <p>Drink at least 8 glasses (about 2 liters) of water a day.</p>
+      <p>Adjust your goal as needed based on your activity level, climate, and body size.</p>
+    </section>
+
+    <div class="tracker-box">
+      <input type="number" id="water-intake" placeholder="Water intake (ml)" />
+      <button onclick="addWater()">Add Water</button>
+    </div>
+
+    <div class="goal-box">
+      <label for="goal">Set Goal: </label>
+      <input type="number" id="goal" placeholder="Goal (ml)" />
+      <button onclick="setGoal()">Set Goal</button>
+    </div>
+
+    <div class="status-box">
+      <h3>Total Intake: <span id="total-intake">0</span> ml</h3>
+      <h3>Goal: <span id="goal-display">2000</span> ml</h3>
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="hydrationChart"></canvas>
+    </div>
+
+    <div class="history-box">
+      <h4>Intake History</h4>
+      <ul id="history-list"></ul>
+    </div>
+
+    <button id="reset-button" onclick="resetTracker()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

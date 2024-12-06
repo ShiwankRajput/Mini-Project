@@ -1,0 +1,203 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4caf50, #1d1f1f);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(28, 30, 32, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    font-size: 1.1em;
+    margin-top: 8px;
+  }
+  
+  /* Instructions Section */
+  .instructions {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .instructions h3 {
+    font-size: 1.2em;
+    color: #4caf50;
+  }
+  
+  .instructions p {
+    font-size: 0.9em;
+  }
+  
+  /* Input Section Styles */
+  input, button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid #555;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #4caf50;
+  }
+  
+  button {
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #2e7d32;
+  }
+  
+  /* Status Box Styles */
+  .status-box, .goal-box, .tracker-box, .history-box {
+    margin-top: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .status-box h3 {
+    font-size: 1.3em;
+  }
+  
+  .status-box span {
+    font-weight: bold;
+  }
+  
+  #progress-bar-container {
+    width: 100%;
+    height: 15px;
+    background-color: #555;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  canvas {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .history-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .history-box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history-box li {
+    font-size: 1em;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  #reset-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+  }
+  
+  #reset-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  #reset-button:active {
+    background-color: #c62828;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    input, button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+  
