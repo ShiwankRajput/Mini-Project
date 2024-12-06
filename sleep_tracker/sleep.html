@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sleep Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="box-container">
+        <header>
+            <h1>Sleep Tracker</h1>
+            <p>Track your sleep patterns and improve your health.</p>
+        </header>
+        <main>
+            <section class="tracker">
+                <h2>Log Your Sleep</h2>
+                <label for="start-time">Sleep Start:</label>
+                <input type="time" id="start-time">
+                
+                <label for="end-time">Wake Up:</label>
+                <input type="time" id="end-time">
+
+                <button id="calculate">Calculate Sleep</button>
+
+                <div class="result">
+                    <h3>Sleep Duration:</h3>
+                    <p id="duration">--:--</p>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <h2>Weekly Sleep Data</h2>
+                <canvas id="sleepChart"></canvas>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Sleep Tracker. Built with ❤️ for better sleep.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1E1E2F;
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.box-container {
+    background-color: #252539;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00B4D8;
+}
+
+header p {
+    font-size: 1rem;
+    color: #A6A6A6;
+}
+
+/* Section Styling */
+section {
+    background-color: #33334E;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.tracker h2, .chart-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #00B4D8;
+}
+
+.tracker label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    color: #EAEAEA;
+}
+
+input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #44445A;
+    color: #EAEAEA;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #00B4D8;
+    color: #1E1E2F;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 180, 216, 0.5);
+}
+
+button:hover {
+    background: #007B9E;
+    transform: scale(1.05);
+}
+
+.result h3 {
+    font-size: 1.1rem;
+    color: #FF6F61;
+}
+
+.result p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Chart Section */
+.chart-section canvas {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    font-size: 0.8rem;
+    color: #A6A6A6;
+    margin-top: 10px;
+    text-align: center;
+}
